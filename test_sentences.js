@@ -91,3 +91,4 @@ testSentences.forEach((s, idx) => {
   const r = testComment(s);
   console.log(`[${idx+1}] "${s.slice(0, 48)}..." => [${r.category.toUpperCase()}] ${r.confidence}% | ${r.action}`);
 });
+

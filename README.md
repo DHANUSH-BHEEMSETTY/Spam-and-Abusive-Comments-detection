@@ -156,6 +156,30 @@ This produces `CommentGuard_AI_Presentation.pptx`, ready to present directly to 
 
 ---
 
+## 🌐 Deploy to Render in 2 Minutes (Free)
+
+This project includes a **`render.yaml`** configuration for automatic 1-click deployment on Render.
+
+### Option A: Using Render Blueprints (Automatic)
+1. Go to [dashboard.render.com](https://dashboard.render.com/) and click **"New +" &rarr; "Blueprint"**.
+2. Connect your GitHub repository: `DHANUSH-BHEEMSETTY/Spam-and-Abusive-Comments-detection`.
+3. Render automatically detects `render.yaml` and deploys the static site on their global CDN.
+
+### Option B: Manual Static Site Setup
+1. On Render, click **"New +" &rarr; "Static Site"**.
+2. Connect this repository: `DHANUSH-BHEEMSETTY/Spam-and-Abusive-Comments-detection`.
+3. Enter the following settings:
+   * **Name:** `commentguard-ai`
+   * **Build Command:** `cd frontend && npm install && npm run build`
+   * **Publish Directory:** `frontend/dist`
+4. Under **"Redirects/Rewrites"**, add:
+   * **Type:** `Rewrite`
+   * **Source:** `/*`
+   * **Destination:** `/index.html`
+5. Click **"Create Static Site"**. Your live URL will be ready in under 60 seconds!
+
+---
+
 ## 📂 Project Repository Structure
 
 ```
