@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Layers, Cpu, Zap, ShieldAlert, CheckCircle, ArrowRight, ShieldCheck, Sparkles, AlertCircle, RefreshCw, HelpCircle, Terminal } from 'lucide-react';
+import { AnimatedArchitectureFlow } from './AnimatedArchitectureFlow';
 
 export const ApproachTab: React.FC = () => {
   const [activeQuestion, setActiveQuestion] = useState<number>(1);
@@ -92,6 +93,9 @@ export const ApproachTab: React.FC = () => {
 
         </div>
       </div>
+
+      {/* Animated Architecture Mermaid & Cascade Flow */}
+      <AnimatedArchitectureFlow />
 
       {/* The 4 Interview Questions Breakdown */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-2xs">
