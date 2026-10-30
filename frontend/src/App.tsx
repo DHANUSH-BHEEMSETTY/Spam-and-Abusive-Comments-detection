@@ -180,8 +180,8 @@ export default function App() {
         </div>
       )}
 
-      {/* Main Content Area */}
-      <main className="flex-1 px-4 sm:px-8 pt-6 pb-24">
+      {/* Main Content Area with generous bottom padding so sticky bottom pill never obscures content */}
+      <main className="flex-1 px-4 sm:px-8 pt-6 pb-40 sm:pb-48">
         {activeTab === 'overview' && (
           <OverviewTab
             onNavigateToQueue={(cat) => {
@@ -201,6 +201,7 @@ export default function App() {
             setSelectedCategory={setSelectedCategoryFilter}
             onModeratorAction={handleModeratorAction}
             onRestoreComment={handleRestoreComment}
+            onAddComment={handleAddCustomComment}
           />
         )}
 

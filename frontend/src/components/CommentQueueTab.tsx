@@ -9,6 +9,7 @@ interface CommentQueueTabProps {
   setSelectedCategory: (cat: string) => void;
   onModeratorAction: (commentId: string, action: ModeratorAction, overrideCategory?: Category) => void;
   onRestoreComment: (commentId: string) => void;
+  onAddComment?: (comment: VideoComment) => void;
 }
 
 export const CommentQueueTab: React.FC<CommentQueueTabProps> = ({
@@ -16,7 +17,8 @@ export const CommentQueueTab: React.FC<CommentQueueTabProps> = ({
   selectedCategory,
   setSelectedCategory,
   onModeratorAction,
-  onRestoreComment
+  onRestoreComment,
+  onAddComment
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCommentId, setSelectedCommentId] = useState<string>(comments[0]?.id || '');

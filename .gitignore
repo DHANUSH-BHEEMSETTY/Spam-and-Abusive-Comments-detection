@@ -37,3 +37,11 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Presentation & Interview materials (excluded from repository as requested)
+*.pptx
+*.pdf
+slide_previews/
+build_*.py
+generate_*.py
+
+
